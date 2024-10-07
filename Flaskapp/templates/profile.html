@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>User Details</h2>
+        <div class="user-info">
+            <p>Username: {{ user[0] }}</p> <!-- Adjusted index for username -->
+            <p>First Name: {{ user[2] }}</p> <!-- Adjusted index for first name -->
+            <p>Last Name: {{ user[3] }}</p> <!-- Adjusted index for last name -->
+            <p>Email: {{ user[4] }}</p> <!-- Adjusted index for email -->
+        </div>
+        <a href="{{ url_for('logout') }}" class="logout-button">Logout</a>
+    </div>
+</body>
+</html>
